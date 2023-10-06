@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
 import Sstc from "./assets/sstc.png";
+import sideimg from "../public/sideimg.png";
 import Testimage from "./assets/testseriesimg.jpg";
 
 const Slider = () => {
@@ -55,8 +56,8 @@ const Slider = () => {
   ];
 
   return (
-    <div style={{display:"flex"}}>
-     <div className="container">
+    <div style={{ display: "flex" }}>
+      <div className="container">
         <div className="loadbar" style={{ width: `${loadingProgress}%` }}></div>
         <div id="slide" ref={slideRef}>
           {data.map((item) => (
@@ -71,7 +72,7 @@ const Slider = () => {
                 <div className="name">{item.name}</div>
                 <div className="des">{item.desc}</div>
                 <button
-                  style={{backgroundColor:"transparent", color: "white" }}
+                  style={{ backgroundColor: "transparent", color: "white" }}
                 >
                   See more...
                 </button>
@@ -87,9 +88,18 @@ const Slider = () => {
             <FontAwesomeIcon icon={faAngleRight} />
           </button>
         </div>
-      </div> 
-      <div height={"100%"}><span>hello</span></div>
+      </div>
       
+      <div style={{ marginTop: "98vh" }}>
+        <text style={{ color: "#242526", fontSize: 18, marginLeft: "1vw" }}>
+          Software | Technology | Excellence
+        </text>
+        {/* <img src={sideimg} alt=""
+          style={{
+            marginLeft: 80,
+          }}
+        /> */}
+      </div>
     </div>
   );
 };
