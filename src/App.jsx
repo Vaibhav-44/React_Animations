@@ -55,8 +55,8 @@ const Slider = () => {
   ];
 
   return (
-    <div>
-      <div className="container">
+    <div style={{display:"flex"}}>
+     <div className="container">
         <div className="loadbar" style={{ width: `${loadingProgress}%` }}></div>
         <div id="slide" ref={slideRef}>
           {data.map((item) => (
@@ -66,12 +66,12 @@ const Slider = () => {
               style={{ backgroundImage: `url(${item.imgUrl})` }}
             >
               {" "}
-              <span className="smallinfo">{item.name}</span>
+              <span className="smalldes">{item.name}</span>
               <div className="content">
                 <div className="name">{item.name}</div>
                 <div className="des">{item.desc}</div>
                 <button
-                  style={{ backgroundColor: "transparent", color: "white" }}
+                  style={{backgroundColor:"transparent", color: "white" }}
                 >
                   See more...
                 </button>
@@ -87,19 +87,9 @@ const Slider = () => {
             <FontAwesomeIcon icon={faAngleRight} />
           </button>
         </div>
-      </div>
-
-      <div
-        style={{
-          marginTop: 10,
-          display: "flex",
-          marginLeft: 30,
-        }}
-      >
-        <span style={{ color: "#242526", fontSize: 18 }}>
-          Software | Technology | Excellence
-        </span>
-      </div>
+      </div> 
+      <div height={"100%"}><span>hello</span></div>
+      
     </div>
   );
 };
