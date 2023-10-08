@@ -13,14 +13,19 @@ body {
   background-color: #ffffff;
   overflow-x: hidden;
 }
+.white {
+  height: 96vh;
+  width: 100vw;
+}
 .container {
   position: absolute;
   width: 100vw;
-  height: 95vh;
+  height: 96vh;
+  margin-bottom: 25px;
 }
 #slide {
   width: max-content;
-  /* margin-top: 50px; */
+  margin-top: 50px;
 }
 .item {
   width: 200px;
@@ -75,23 +80,28 @@ body {
   z-index: 11111;
 }
 .item .smalldes {
-  font-family:'cursive', sans-serif !important ;
+  font-family:  sans-serif !important ;
   font-size: small;
   font-weight: bolder;
   color: white;
-  
-  margin: 0 20px;
+
+  margin: 20px;
 }
 .item .name {
   font-size: 50px;
   font-weight: bold;
   opacity: 0;
+  background: linear-gradient(to right, #1c87c9 30%, #8ebf42 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   animation: showcontent 1s ease-in-out 1 forwards;
 }
 .item .des {
   font-size: 13px;
   margin: 20px 0;
   opacity: 0;
+
   animation: showcontent 1s ease-in-out 0.3s 1 forwards;
 }
 .item button {
@@ -118,6 +128,7 @@ body {
   z-index: 222222;
   text-align: center;
   width: 100%;
+  background-image: inherit;
 }
 .buttons button {
   width: 50px;
@@ -125,12 +136,28 @@ body {
   border-radius: 50%;
   border: 1px solid #555;
   transition: 0.5s;
+  background-image: inherit;
 }
 .buttons button:hover {
   background-color: #8ee955;
 }
-
-.span  {
+.span {
   color: "#242526";
   font-size: 18;
+}
+.custom-margin {
+  margin: 25px !important;
+}
+.info2 {
+  height: auto;
+  width: 45vw;
+  margin-left: 25px;
+  background-color: lightblue;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+.info2-text {
+  font-size: 25px;
+  margin: 15px;
+  font-family: cursive;
 }

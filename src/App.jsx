@@ -5,6 +5,8 @@ import "./index.css";
 import Sstc from "./assets/sstc.png";
 import sideimg from "../public/sideimg.png";
 import Testimage from "./assets/testseriesimg.jpg";
+import white from "../public/white.jpg";
+import grey from "../public/grey.jpg";
 
 const Slider = () => {
   const slideRef = useRef(null);
@@ -32,7 +34,7 @@ const Slider = () => {
       id: 2,
       imgUrl: Sstc,
       desc: "The Computer Science & Engineering Department welcomes you",
-      name: "SSTC",
+      name: "WELCOME TO SSTC",
     },
     {
       id: 3,
@@ -56,7 +58,7 @@ const Slider = () => {
   ];
 
   return (
-    <div style={{ display: "flex" }}>
+    <div style={{ display: "inherit" }}>
       <div className="container">
         <div className="loadbar" style={{ width: `${loadingProgress}%` }}></div>
         <div id="slide" ref={slideRef}>
@@ -89,17 +91,51 @@ const Slider = () => {
           </button>
         </div>
       </div>
-      
-      <div style={{ marginTop: "98vh" }}>
-        <text style={{ color: "#242526", fontSize: 18, marginLeft: "1vw" }}>
-          Software | Technology | Excellence
-        </text>
-        {/* <img src={sideimg} alt=""
-          style={{
-            marginLeft: 80,
-          }}
-        /> */}
+      <div height={"95vh"} width={"100vw"}>
+        <img className="white" src={white} />
       </div>
+      <br />
+      <span
+        className="custom-margin"
+        style={{
+          color: "#242526",
+          fontSize: 18,
+        }}
+      >
+        Software | Technology | Excellence
+      </span>
+      <br />
+      <br />
+
+      <div style={{ width: "50vw", marginLeft: "25px", flexDirection: "row" }}>
+        <span
+          style={{
+            color: "#000000",
+            fontSize: "30px",
+            fontWeight: "bold",
+          }}
+        >
+          Welcome To Computer Science and Engineering Department of SSTC
+        </span>
+      </div>
+      <br />
+      <br />
+      <div className="info2">
+        <div style={{ padding: "28px" }}>
+          <text className="info2-text">
+            The department of Computer Science and Engineering at the Shri
+            shankaracharya technical campus promotes innovation-centric
+            education and performs cutting-edge research. The department
+            continuously endeavors to create and sustain an academic environment
+            conducive to the highest level of research and teaching. The goal is
+            to develop human resources with sound knowledge of theoretical,
+            systems, and application aspects of Computer Science & Engineering.
+            The department also facilitates the development of academia-industry
+            collaborations and societal outreach activities.
+          </text>
+        </div>
+      </div>
+      
     </div>
   );
 };
