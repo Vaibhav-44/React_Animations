@@ -41,7 +41,7 @@ body {
   border-radius: 20px;
   box-shadow: 0 30px 50px #505050;
 }
-/* .item:nth-child(1), */
+.item:nth-child(1),
 .item:nth-child(2) {
   left: 0;
   top: 0;
@@ -149,15 +149,23 @@ body {
   margin: 25px !important;
 }
 .info2 {
-  height: auto;
+  height: 63vh;
   width: 45vw;
   margin-left: 25px;
   background-color: lightblue;
   border-top-left-radius: 40px;
   border-bottom-right-radius: 40px;
+  margin-top: 2rem;
 }
 .info2-text {
   font-size: 25px;
   margin: 15px;
   font-family: cursive;
+}
+.sideimg {
+  width: 50vw;
+  height: auto;
+  margin: -5rem 0 0 2.5rem;
+  border-bottom-left-radius: 4rem;
+  border-top-left-radius: 4rem;
 }
