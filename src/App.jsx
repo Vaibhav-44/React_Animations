@@ -9,12 +9,12 @@ import Testimage from "./assets/testseriesimg.jpg";
 import white from "../public/white.jpg";
 import grey from "../public/grey.jpg";
 import { useNavigate } from "react-router-dom";
+import Logo_name from "../public/logo.png";
 
-const Slider = () => {
+export default function App() {
   const slideRef = useRef(null);
   const [loadingProgress, setLoadingProgress] = useState(0);
-  const navigate = useNavigate();
-
+  //const navigate = useNavigate();
   const handleClickNext = () => {
     let items = slideRef.current.querySelectorAll(".item");
     slideRef.current.appendChild(items[0]);
@@ -25,9 +25,22 @@ const Slider = () => {
     slideRef.current.prepend(items[items.length - 1]);
   };
 
-  const handleclick = () => {
-    navigate(seemore);
-  };
+  // const handleSeeMore = (seemore) => {
+  //   navigate(seemore);
+  // };
+
+  // const observer = new IntersectionObserver(entries => {
+  //   // Loop over the entries
+  //   entries.forEach(entry => {
+  //     // If the element is visible
+  //     if (entry.isIntersecting) {
+  //       // Add the animation class
+  //       entry.target.classList.add('./index/sideimg-animations');
+  //     }
+  //   });
+  // });
+
+  // observer.observe(document.querySelector('.sideimg'));
 
   const data = [
     {
@@ -71,6 +84,9 @@ const Slider = () => {
 
   return (
     <div>
+      <div className="navbar">
+        <img src={Logo_name} className="Logo_name" />
+      </div>
       <div className="container">
         <div className="loadbar" style={{ width: `${loadingProgress}%` }}></div>
         <div id="slide" ref={slideRef}>
@@ -86,10 +102,10 @@ const Slider = () => {
                 <div className="name">{item.name}</div>
                 <div className="des">{item.desc}</div>
                 <button
-                  onClick={handleclick}
+                  //onClick={() => handleSeeMore(item.seemore)}
                   style={{ backgroundColor: "inherit", color: "inherit" }}
                 >
-                  <a href={handleclick} style={{color:"white"}}>See more...</a>
+                  See more...
                 </button>
               </div>
             </div>
@@ -156,12 +172,11 @@ const Slider = () => {
             </text>
           </div>
         </div>
+        <hr />
         <img className="sideimg" src={sideimg} />
       </div>
       <br />
       <br />
     </div>
   );
-};
-
-export default Slider;
+}
